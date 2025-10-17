@@ -1,0 +1,2 @@
+pip install requests python-whois dnspython phonenumbers beautifulsoup4 weasyprint
+# weasyprint es opcional; si prefieres usar wkhtmltopdf en vez de weasyprint, instala wkhtmltopdf en tu sistema
