@@ -1,39 +1,47 @@
-# Data Orchestrator (local)
+# Instrucciones de instalación y uso
 
-Instrucciones rápidas para ejecutar búsquedas reales y configurar APIs.
+## 1. Requisitos previos
+- Python 3.8 o superior (ya tienes Python 3.14.0)
+- Acceso a PowerShell
 
-1) Crear un entorno virtual (recomendado):
-
+## 2. (Opcional pero recomendado) Crear un entorno virtual
 ```powershell
 python -m venv .venv
 .venv\Scripts\Activate.ps1
 ```
 
-2) Instalar dependencias:
-
+## 3. Instalar dependencias
 ```powershell
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 ```
 
-3) Configurar variables de entorno necesarias (ejemplo HIBP):
-
+## 4. Configurar variables de entorno para APIs (si usas HaveIBeenPwned o URLs personalizadas)
 ```powershell
-$env:HIBP_API_KEY = 'tu_hibp_api_key_aqui'
-# Opcional: cambiar plataformas por defecto
-$env:SOCIAL_PLATFORMS = 'https://twitter.com/{},https://github.com/{}'
+$env:HIBP_API_KEY = "tu_api_key_hibp"
+# (Opcional) Cambiar plataformas sociales:
+$env:SOCIAL_PLATFORMS = "https://twitter.com/{},https://github.com/{}"
 ```
 
-4) Ejecutar:
-
+## 5. Ejecutar el programa
+Interactivo:
 ```powershell
 python main.py
 ```
-
-O bien no interactivo:
-
+No interactivo (ejemplo):
 ```powershell
 echo "username`nmyuser" | python main.py
 ```
 
-5) Cuando me facilites las URLs/APIs concretas que quieres usar, actualizaré los módulos para integrarlas y añadiré ejemplos de configuración y pruebas.
+## 6. Salida
+- El resultado se guarda en `output.txt` y también se muestra en pantalla.
+
+## 7. Personalización
+- Cuando tengas nuevas URLs o APIs, indícalo y se integrarán en los módulos correspondientes.
+
+---
+
+Si tienes errores de dependencias, ejecuta:
+```powershell
+python -m pip install requests dnspython python-whois
+```
