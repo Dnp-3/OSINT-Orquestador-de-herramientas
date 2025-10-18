@@ -1,6 +1,2 @@
-requests 
 python-whois 
 dnspython 
-phonenumbers 
-beautifulsoup4 
-weasyprint
