@@ -1,3 +1,4 @@
 requests>=2.0
 dnspython
 python-whois
+Sherlock Proyect https://github.com/sherlock-project/sherlock
