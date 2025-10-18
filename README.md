@@ -18,3 +18,10 @@ Herramienta de recopilación OSINT modular, extensible y automatizable. Solo par
 git clone https://github.com/tuusuario/osint-modular.git
 cd osint-modular
 pip install -r requirements.txt
+```
+## Uso
+Soporta inputs: --name, --email, --username, --phone, --domain
+```bash
+python osint_modular_ext.py --domain example.com --consent --html --pdf
+python osint_modular_ext.py --domain example.com --consent --external-cmd "theHarvester -d {domain} -b all -l 200 -f {outbase}"
+```
