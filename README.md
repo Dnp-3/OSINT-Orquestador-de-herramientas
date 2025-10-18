@@ -15,8 +15,8 @@ Herramienta de recopilación OSINT modular, extensible y automatizable. Solo par
 ##  Instalación
 
 ```bash
-git clone https://github.com/tuusuario/osint-modular.git
-cd osint-modular
+git clone https://github.com/Dnp-3/OSINT-Orquestador-de-herramientas
+cd OSINT-Orquestador-de-herramientas
 pip install -r requirements.txt
 ```
 ## Uso
