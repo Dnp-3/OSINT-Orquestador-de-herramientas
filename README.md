@@ -102,6 +102,7 @@ $env:SOCIAL_PLATFORMS = "https://twitter.com/{},https://github.com/{}"
   5. Phone (soon)
   6. Domain
   ```
+-Escribe el valor de la entrada elegida
 
 6. Salida
 - El resultado se guarda en la carpeta de reportes, la cual genera distintas carpetas y archivos html dependiendo de la funcionalidad que ejecutes y también se muestra en pantalla.
