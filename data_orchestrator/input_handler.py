@@ -27,6 +27,7 @@ def get_input():
             print("[!] Opción inválida")
             if attempts >= 3:
                 raise ValueError("Demasiados intentos inválidos.")
+                quit()
             continue
  
         if query_type == "phone":
@@ -39,4 +40,5 @@ def get_input():
             continue
  
         # ÉXITO: siempre devolvemos una tupla
+
         return query_type, value
