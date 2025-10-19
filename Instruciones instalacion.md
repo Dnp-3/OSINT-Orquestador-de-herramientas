@@ -26,7 +26,7 @@ $env:SOCIAL_PLATFORMS = "https://twitter.com/{},https://github.com/{}"
 ## 5. Ejecutar el programa
 Interactivo:
 ```powershell
-python main.py
+python main2.py
 ```
 No interactivo (ejemplo):
 ```powershell
@@ -34,7 +34,7 @@ echo "username`nmyuser" | python main.py
 ```
 
 ## 6. Salida
-- El resultado se guarda en `output.txt` y también se muestra en pantalla.
+- El resultado se guarda en la carpeta de reportes, la cual genera distintas carpetas y txt dependiendo de la funcionalidad que ejecutes y también se muestra en pantalla.
 
 ## 7. Personalización
 - Cuando tengas nuevas URLs o APIs, indícalo y se integrarán en los módulos correspondientes.
@@ -45,3 +45,4 @@ Si tienes errores de dependencias, ejecuta:
 ```powershell
 python -m pip install requests dnspython python-whois
 ```
+
