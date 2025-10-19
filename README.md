@@ -89,7 +89,9 @@ $env:SOCIAL_PLATFORMS = "https://twitter.com/{},https://github.com/{}"
 ```
 
 5. Ejecutar el programa principal
-   
+   - ```
+  cd data_orchestrator
+  ```
 - ```
   python main2.py
   ```
