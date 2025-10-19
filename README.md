@@ -75,9 +75,10 @@ python -m venv .venv
 ```
 
 3. Instalar dependencias
-```powershell
+```
 python -m pip install --upgrade pip
 python -m pip install requests dnspython python-whois
+pip install sherlock-project
 ```
 
 4. Configurar variables de entorno para APIs (si usas HaveIBeenPwned o URLs personalizadas)
