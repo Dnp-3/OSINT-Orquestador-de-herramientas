@@ -1,6 +1,21 @@
 # OSINT Data Orchestrator
 
-**OSINT Data Orchestrator** es una herramienta modular de recolección de información que permite realizar tareas básicas de inteligencia de fuentes abiertas (OSINT) sobre diferentes tipos de datos: correos electrónicos, nombres de usuario, dominios y más.
+**OSINT Data Orchestrator** es una herramienta modular de recolección de información OSINT. Permite realizar tareas básicas de inteligencia de fuentes abiertas (OSINT) sobre diferentes tipos de datos: correos electrónicos, nombres de usuario, dominios y cuentas de redes sociales. Posteriormente genera reportes en **HTML** para una mejor visualización.
+
+## Estructura del proyecto
+data_orchestrator/
+|
+├── main.py # Script principal
+├── input_handler.py # Gestión de entradas
+|
+├── modules/ # Módulos independientes
+| ├── init.py
+| ├── breach_check.py
+| ├── username_check.py
+| ├── sherlock_check.py
+| ├── domain_lookup.py
+|
+└── report/ # Se genera automáticamente al ejecutar consultas
 
 ## Características principales
 - Verificación de **brechas de datos** mediante `Have I Been Pawned`.  
@@ -13,13 +28,28 @@
 ---
 
 ## Requisitos
-- Python 3.8+
-- Módulos:
+- Python 3.10+
+- Librerias Python:
   - `requests`
   - `dnspython`
   - `python-whois`
-- Herramienta externa opcional: [`sherlock`](https://github.com/sherlock-project/sherlock)
 
+- Herramienta externa opcional:
+  - pipx install sherlock
+  - [`sherlock`](https://github.com/sherlock-project/sherlock)
+
+- Para consultas reales en Have I Been Pwned debes exportar tu API key
+  -  Linux / macOS
+    -    export HIBP_API_KEY="TU_API_KEY_AQUI"
+         python main2.py
+
+  - Windows CMD
+    -   set HIBP_API_KEY=TU_API_KEY_AQUI
+        python main.py
+        
+  - Windows PowerShell
+    -   $env:HIBP_API_KEY="TU_API_KEY_AQUI"
+        python main.py
 ---
 
 ## Instalación
@@ -48,18 +78,20 @@ $env:HIBP_API_KEY = "tu_api_key_hibp"
 $env:SOCIAL_PLATFORMS = "https://twitter.com/{},https://github.com/{}"
 ```
 
-5. Ejecutar el programa
-Interactivo:
-```powershell
-python main2.py
-```
-No interactivo (ejemplo):
-```powershell
-echo "username`nmyuser" | python main.py
-```
+5. Ejecutar el programa principal
+   
+- python main2.py
+
+- Selecciona el tipo de entrada
+  -  1. Name
+  -  2. Email
+  -  3. Username
+  -  4. Username (Sherlock)
+  -  5. Phone (soon)
+  -  6. Domain
 
 6. Salida
-- El resultado se guarda en la carpeta de reportes, la cual genera distintas carpetas y txt dependiendo de la funcionalidad que ejecutes y también se muestra en pantalla.
+- El resultado se guarda en la carpeta de reportes, la cual genera distintas carpetas y archivos html dependiendo de la funcionalidad que ejecutes y también se muestra en pantalla.
 
 7. Personalización
 - Cuando tengas nuevas URLs o APIs, indícalo y se integrarán en los módulos correspondientes.
