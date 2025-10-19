@@ -13,7 +13,7 @@ def sherlock_check(username):
     if not shutil.which("sherlock"):
         return [
             "[ERROR] Sherlock no está instalado o no se encuentra en el PATH.",
-            "Sugerencia: instala con 'pipx install sherlock' o 'pip install sherlock'.",
+            "Sugerencia: instala con 'pip install sherlock.project' o 'pipx install sherlock'",
             "Si ya lo tienes, asegúrate de ejecutar 'pipx ensurepath'."
             ]
 
@@ -50,3 +50,4 @@ def sherlock_check(username):
         results.append(f"[ERROR] Excepción inesperada durante ejecución de Sherlock: {e}")
 
     return results
+
