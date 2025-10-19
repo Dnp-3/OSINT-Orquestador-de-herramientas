@@ -8,12 +8,14 @@ SOCIAL_PLATFORMS = [
     "https://github.com/{}",
     "https://www.reddit.com/user/{}",
     "https://www.facebook.com/{}",
-    "https://www.twitch.tv/{}",         # Añadido Twitch
-    "https://www.youtube.com/{}",       # Añadido YouTube
+    "https://www.twitch.tv/{}",        
+    "https://www.youtube.com/{}",       
 ]
 
 HEADERS = {
-    "User-Agent": "DataOrchestrator/1.0"
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                  "AppleWebKit/537.36 (KHTML, like Gecko) "
+                  "Chrome/120.0 Safari/537.36"
 }
 
 def check_username(username):

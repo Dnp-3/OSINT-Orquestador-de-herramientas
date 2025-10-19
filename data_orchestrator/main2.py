@@ -1,3 +1,4 @@
+#main2.py
 from input_handler import get_input
 from modules import breach_check, username_check, domain_lookup, sherlock_check 
 import os
@@ -18,12 +19,50 @@ def save_report(module_name, content_lines):
 
     # Nombre del archivo con timestamp para evitar sobreescritura
     timestamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S")
-    filename = f"result_{timestamp}.txt"
+    filename = f"result_{timestamp}.html"
     filepath = os.path.join(module_dir, filename)
+
+    # Convertir contenido a HTML básico
+    html_content = f"""<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Reporte - {module_name}</title>
+<style>
+    body {{
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+        color: #333;
+        margin: 40px;
+    }}
+    h1 {{
+        color: #0078D7;
+    }}
+    pre {{
+        background: #fff;
+        border: 1px solid #ddd;
+        padding: 1em;
+        border-radius: 8px;
+        overflow-x: auto;
+        line-height: 1.4em;
+    }}
+    .timestamp {{
+        font-size: 0.9em;
+        color: #777;
+    }}
+</style>
+</head>
+<body>
+    <h1>Reporte - {module_name}</h1>
+    <p class="timestamp">Generado el {datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")}</p>
+    <pre>{os.linesep.join(content_lines)}</pre>
+</body>
+</html>
+"""
 
     try:
         with open(filepath, "w", encoding="utf-8") as f:
-            f.write("\n".join(content_lines))
+            f.write(html_content)
         print(f"[✓] Resultados guardados en '{os.path.abspath(filepath)}'")
     except Exception as e:
         print(f"[!] Error guardando resultados para {module_name}: {e}")

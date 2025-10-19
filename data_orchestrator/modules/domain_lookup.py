@@ -10,10 +10,14 @@ def lookup_domain(domain):
     """
     results = []
 
+    # Si es un correo, extraer dominio
+    if "@" in domain:
+        domain = domain.split("@")[-1]
+
     # WHOIS
     try:
         w = whois.whois(domain)
-        results.append("WHOIS:")
+        results.append("[+] WHOIS:")
         registrar = getattr(w, "registrar", None)
         creation = getattr(w, "creation_date", None)
         expiration = getattr(w, "expiration_date", None)
@@ -24,7 +28,7 @@ def lookup_domain(domain):
         results.append(f"  Expiration date: {expiration}")
         results.append(f"  Name servers: {nameservers}")
     except Exception as e:
-        results.append(f"WHOIS lookup failed: {e}")
+        results.append(f"[!] WHOIS lookup failed: {e}")
 
     # DNS records (A, MX, NS)
     results.append("DNS records:")

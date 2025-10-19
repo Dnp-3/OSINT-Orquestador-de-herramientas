@@ -5,7 +5,7 @@ def get_input():
     print("2. Email")
     print("3. Username")
     print("4. Username (Sherlock)")
-    print("5. Phone (soon)")
+    print("5. Phone (Próximamente)")
     print("6. Domain")
  
     options = {
@@ -13,7 +13,7 @@ def get_input():
         "2": "email",
         "3": "username",
         "4": "username_sherlock",
-        "5": "phone soon",          # si aún no implementas, puedes bloquear más abajo
+        "5": "phone",          # si aún no implementas, puedes bloquear más abajo
         "6": "domain",
     }
  
