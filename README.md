@@ -26,5 +26,5 @@
 
 1. **Clonar el repositorio**
    ```bash
-   git clone https://github.com/tuusuario/osint-data-orchestrator.git
-   cd osint-data-orchestrator
+   git clone https://github.com/Dnp-3/OSINT-Orquestador-de-herramientas
+   cd OSINT-Orquestador-de-herramientas
