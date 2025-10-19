@@ -1,27 +1,30 @@
-# OSINT Modular Tool (Ética)
+# OSINT Data Orchestrator
 
-Herramienta de recopilación OSINT modular, extensible y automatizable. Solo para uso ético y con consentimiento explícito.
+**OSINT Data Orchestrator** es una herramienta modular de recolección de información que permite realizar tareas básicas de inteligencia de fuentes abiertas (OSINT) sobre diferentes tipos de datos: correos electrónicos, nombres de usuario, dominios y más.
 
-## Funcionalidades
+## Características principales
+- Verificación de **brechas de datos** mediante `Have I Been Pawned`.  
+- Búsqueda de **nombres de usuario** en múltiples redes sociales.  
+- Integración con `Sherlock` para búsqueda OSINT avanzada de usernames.  
+- Consultas de **WHOIS** y registros DNS para dominios.  
+- Sistema de reporte automático con guardado en archivos por módulo.  
+- Diseño modular para agregar fácilmente nuevas fuentes OSINT.
 
-- Entrada por: nombre, email, username, número de teléfono o dominio.
+---
+
+## Requisitos
+- Python 3.8+
 - Módulos:
-  - HaveIBeenPwned (con o sin API key)
-  - Verificación de usernames en múltiples redes
-  - WHOIS, DNS y metadatos de dominios
-  - Integración con herramientas externas como `theHarvester`
-- Exporta resultados en JSON, HTML y PDF
+  - `requests`
+  - `dnspython`
+  - `python-whois`
+- Herramienta externa opcional: [`sherlock`](https://github.com/sherlock-project/sherlock)
 
-##  Instalación
+---
 
-```bash
-git clone https://github.com/Dnp-3/OSINT-Orquestador-de-herramientas
-cd OSINT-Orquestador-de-herramientas
-pip install -r requirements.txt
-```
-## Uso
-Soporta inputs: --name, --email, --username, --phone, --domain
-```bash
-python osint_modular_ext.py --domain example.com --consent --html --pdf
-python osint_modular_ext.py --domain example.com --consent --external-cmd "theHarvester -d {domain} -b all -l 200 -f {outbase}"
-```
+## Instalación
+
+1. **Clonar el repositorio**
+   ```bash
+   git clone https://github.com/tuusuario/osint-data-orchestrator.git
+   cd osint-data-orchestrator
