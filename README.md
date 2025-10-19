@@ -77,7 +77,7 @@ python -m venv .venv
 3. Instalar dependencias
 ```powershell
 python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
+python -m pip install requests dnspython python-whois
 ```
 
 4. Configurar variables de entorno para APIs (si usas HaveIBeenPwned o URLs personalizadas)
@@ -106,9 +106,3 @@ $env:SOCIAL_PLATFORMS = "https://twitter.com/{},https://github.com/{}"
 - Cuando tengas nuevas URLs o APIs, indícalo y se integrarán en los módulos correspondientes.
 
 ---
-
-Si tienes errores de dependencias, ejecuta:
-```powershell
-python -m pip install requests dnspython python-whois
-```
-
