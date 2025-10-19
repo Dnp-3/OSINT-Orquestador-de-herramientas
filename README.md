@@ -4,6 +4,7 @@
 
 ## Estructura del proyecto
 
+\\\
   data_orchestrator/
 │
 ├── main.py              # Script principal
@@ -17,6 +18,7 @@
 │   └── domain_lookup.py
 │
 └── report/              # Se genera automáticamente al ejecutar consultas
+\\\
 
 ## Características principales
 - Verificación de **brechas de datos** mediante `Have I Been Pawned`.  
