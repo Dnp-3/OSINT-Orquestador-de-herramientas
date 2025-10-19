@@ -3,4 +3,5 @@
 
 #│   ├── breach_check.py
 #│   ├── username_check.py
+#│   ├──sherlock_check.py
 #│   └── domain_lookup.py
