@@ -80,7 +80,7 @@ python -m pip install --upgrade pip
 python -m pip install requests
 python -m pip install dnspython
 python -m pip install python-whois
-pip install sherlock-project
+python -m pip install sherlock-project
 ```
 
 4. Configurar variables de entorno para APIs (si usas HaveIBeenPwned o URLs personalizadas)
