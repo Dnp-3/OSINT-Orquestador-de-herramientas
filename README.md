@@ -40,16 +40,22 @@ data_orchestrator/
 
 - Para consultas reales en Have I Been Pwned debes exportar tu API key
   -  Linux / macOS
-    -    export HIBP_API_KEY="TU_API_KEY_AQUI"
+         ```
+         export HIBP_API_KEY="TU_API_KEY_AQUI"
          python main2.py
-
+         ```
+          
   - Windows CMD
-    -   set HIBP_API_KEY=TU_API_KEY_AQUI
+        ```
+        set HIBP_API_KEY=TU_API_KEY_AQUI
         python main.py
+        ```
         
   - Windows PowerShell
-    -   $env:HIBP_API_KEY="TU_API_KEY_AQUI"
+       ```
+        $env:HIBP_API_KEY="TU_API_KEY_AQUI"
         python main.py
+       ```
 ---
 
 ## Instalación
