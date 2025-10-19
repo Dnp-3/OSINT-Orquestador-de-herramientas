@@ -68,7 +68,11 @@ def save_report(module_name, content_lines):
         print(f"[!] Error guardando resultados para {module_name}: {e}")
 
 def main():
-    query_type, value = get_input()
+    try: 
+        query_type, value = get_input()
+    except ValueError:
+        print("Demasiados datos incorrectos")
+        quit()
     breach_check_bool = 0
     social_media_check_bool = 0
     sherlock_check_bool = 0
@@ -151,3 +155,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
