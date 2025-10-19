@@ -71,7 +71,7 @@ def main():
     try: 
         query_type, value = get_input()
     except ValueError:
-        print("Demasiados datos incorrectos")
+        print("\n Demasiados datos incorrectos \n")
         quit()
     breach_check_bool = 0
     social_media_check_bool = 0
@@ -155,4 +155,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
