@@ -3,19 +3,20 @@
 **OSINT Data Orchestrator** es una herramienta modular de recolección de información OSINT. Permite realizar tareas básicas de inteligencia de fuentes abiertas (OSINT) sobre diferentes tipos de datos: correos electrónicos, nombres de usuario, dominios y cuentas de redes sociales. Posteriormente genera reportes en **HTML** para una mejor visualización.
 
 ## Estructura del proyecto
-data_orchestrator/
-|
-├── main.py # Script principal
-├── input_handler.py # Gestión de entradas
-|
-├── modules/ # Módulos independientes
-| ├── init.py
-| ├── breach_check.py
-| ├── username_check.py
-| ├── sherlock_check.py
-| ├── domain_lookup.py
-|
-└── report/ # Se genera automáticamente al ejecutar consultas
+
+  data_orchestrator/
+│
+├── main.py              # Script principal
+├── input_handler.py     # Gestión de entradas
+│
+├── modules/             # Módulos independientes
+│   ├── __init__.py
+│   ├── breach_check.py
+│   ├── username_check.py
+│   ├── sherlock_check.py
+│   └── domain_lookup.py
+│
+└── report/              # Se genera automáticamente al ejecutar consultas
 
 ## Características principales
 - Verificación de **brechas de datos** mediante `Have I Been Pawned`.  
