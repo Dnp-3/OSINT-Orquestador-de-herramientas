@@ -77,7 +77,9 @@ python -m venv .venv
 3. Instalar dependencias
 ```
 python -m pip install --upgrade pip
-python -m pip install requests dnspython python-whois
+python -m pip install requests
+python -m pip install dnspython
+python -m pip install python-whois
 pip install sherlock-project
 ```
 
@@ -89,10 +91,8 @@ $env:SOCIAL_PLATFORMS = "https://twitter.com/{},https://github.com/{}"
 ```
 
 5. Ejecutar el programa principal
-   - ```
-  cd data_orchestrator
-  ```
 - ```
+  cd data_orchestrator
   python main2.py
   ```
 
