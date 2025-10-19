@@ -38,10 +38,6 @@
   - `dnspython`
   - `python-whois`
 
-- Herramienta externa opcional:
-  - pipx install sherlock
-  - [`sherlock`](https://github.com/sherlock-project/sherlock)
-
 - Para consultas reales en Have I Been Pwned debes exportar tu API key
   -  Linux / macOS
          ```
