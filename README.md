@@ -89,15 +89,19 @@ $env:SOCIAL_PLATFORMS = "https://twitter.com/{},https://github.com/{}"
 
 5. Ejecutar el programa principal
    
-- python main2.py
+- ```
+  python main2.py
+  ```
 
 - Selecciona el tipo de entrada
-  -  1. Name
-  -  2. Email
-  -  3. Username
-  -  4. Username (Sherlock)
-  -  5. Phone (soon)
-  -  6. Domain
+- ```  
+  1. Name
+  2. Email
+  3. Username
+  4. Username (Sherlock)
+  5. Phone (soon)
+  6. Domain
+  ```
 
 6. Salida
 - El resultado se guarda en la carpeta de reportes, la cual genera distintas carpetas y archivos html dependiendo de la funcionalidad que ejecutes y también se muestra en pantalla.
