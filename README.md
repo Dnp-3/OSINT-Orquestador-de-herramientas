@@ -32,6 +32,7 @@
 
 ## Requisitos
 - Python 3.10+
+- git: https://git-scm.com/downloads/win
 - Librerias Python:
   - `requests`
   - `dnspython`
